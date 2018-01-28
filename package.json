@@ -1,0 +1,39 @@
+{
+  "name": "adidas-api-server",
+  "version": "1.0.0",
+  "description": "Adidas API Platform",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/panchalneel/adidas-api-server.git"
+  },
+  "author": "Nil Panchal",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "connect-mongo": "^2.0.1",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "debug": "~2.6.9",
+    "ejs": "^2.5.7",
+    "errorhandler": "^1.5.0",
+    "express": "~4.15.5",
+    "express-session": "^1.15.6",
+    "jade": "~1.11.0",
+    "lodash": "^4.17.4",
+    "method-override": "^2.3.10",
+    "mongodb-uri": "^0.9.7",
+    "morgan": "~1.9.0",
+    "multer": "^1.3.0",
+    "serve-favicon": "~2.4.5",
+    "swagger-node-express": "^2.1.3"
+  },
+  "devDependencies": {
+    "request": "^2.58.0",
+    "istanbul": "^1.0.0-alpha.2",
+    "mocha": "^2.3.4"
+  }
+}
