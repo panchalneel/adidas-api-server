@@ -58,7 +58,7 @@ function configureApp(app) {
     let methodOverride = require('method-override');
     let cookieParser = require('cookie-parser');
     let config = require('./environments');
-    let multer = require('multer');
+
 
     //setup bodyparser
     app.use(bodyParser.json({type: 'application/*+json', limit: '500mb'}));
@@ -72,11 +72,6 @@ function configureApp(app) {
 
     //setup method override
     app.use(methodOverride());
-
-    //setup multer default option
-    global.upload = multer({
-        dest: config.root + '/uploads/'
-    });
 
     let Response = require('../libs/response');
     let response = new Response();
