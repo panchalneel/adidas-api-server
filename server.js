@@ -1,4 +1,6 @@
 var app = require('./app');
-var server = app.listen(config.server.port, () => {
+
+const PORT = process.env.PORT || 8080;
+var server = app.listen(PORT, () => {
     logger.info(`Server listening on ${server.address().address} @ ${server.address().port}`);
 });app.js
