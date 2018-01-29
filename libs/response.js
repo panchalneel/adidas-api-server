@@ -1,3 +1,4 @@
+/*
 function Response(){
 	this.handler     = function(){
 		return function(req, res, next){
@@ -54,4 +55,4 @@ function ResponseHandler(req, resp){
 	}
 }
 
-module.exports = Response;
+module.exports = Response;*/

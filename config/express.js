@@ -11,7 +11,6 @@ module.exports = (app) => {
 
     //Setup Exception Class
     let exceptions = require('./exceptions.json');
-    global.Exception = require('../libs/exception')(exceptions);
 
     //Add morgan to console the request
     app.use(morgan('dev'));
@@ -73,9 +72,9 @@ function configureApp(app) {
     //setup method override
     app.use(methodOverride());
 
-    let Response = require('../libs/response');
-    let response = new Response();
-    app.use(response.handler());
+    //let Response = require('../libs/response');
+    //let response = new Response();
+    //app.use(response.handler());
 
     app.use(cookieParser());
     app.set('appPath', getAppPath(app));

@@ -12,35 +12,22 @@ module.exports = class WishlistController {
     }
 
     add(req, res) {
-        console.log('Add to wishlist');
-        //console.log(req.body);
-        console.log("Before Wishlist");
-        console.log(wishList);
-
+        logger.info("Add article to wishlist");
         let articalDetails = req.body;
-
         global.wishList[articalDetails.id] = articalDetails;
         global.counter += 1;
-        console.log("WishList : ");
-        console.log(wishList);
         res.status(200);
-        res.send({status: "Success", "message": "Product added in wishlist"});
+        res.send({status: "Success", "message": "Article added in wishlist"});
     }
 
     remove(req, res) {
         let id = parseInt(req.params.id);
-        console.log("Id : " + id);
-        console.log('Remove to wishlist');
-
         delete global.wishList[id];
-        console.log("WishList : ");
-        console.log(wishList);
         res.status(200);
-        res.send({status: "Success", message: "Product removed from wishlist"});
+        res.send({status: "Success", message: "Article removed from wishlist"});
     }
 
     list(req, res) {
-        console.log('List wishlist');
         res.status(200);
         res.send({status: "Success", data: _.values(global.wishList)});
     }
