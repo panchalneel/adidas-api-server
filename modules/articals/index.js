@@ -8,6 +8,9 @@ module.exports = class WishlistController {
         router.post('/wishlist', this.add);
         router.delete('/wishlist/:id', this.remove);
         router.get('/wishlist', this.list);
+        app.get('/coverage', function(req, res, next) {
+            res.render('coverage/lcov-report/index', { title: 'Express' });
+        });
 
     }
 

@@ -65,7 +65,7 @@ function configureApp(app) {
     app.use(bodyParser.urlencoded({extended: false, limit: '500mb'}));
 
     //setup views
-    app.set('views', config.root + '/server/views');
+    app.set('views', global.ROOT_PATH   );
     app.engine('html', require('ejs').renderFile);
     app.set('view engine', 'html');
 
