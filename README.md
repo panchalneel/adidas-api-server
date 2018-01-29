@@ -1,4 +1,4 @@
-# adidas-api-server
+# Adidas-api-server
 API Server to handle data operation
 
 Steps to run server
