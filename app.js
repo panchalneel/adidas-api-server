@@ -1,5 +1,6 @@
 let express = require('express');
 let app = express();
+global.ROOT_PATH = __dirname;
 const config = require('./config/environments');
 global.config = config;
 
